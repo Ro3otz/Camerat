@@ -10,10 +10,10 @@ server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind((server_ip, server_port))
 server_socket.listen(10)
 
-print("Sunucu bekleniyor...")
+print("Wait...")
 
 connection, address = server_socket.accept()
-print("Bağlantı Alındı:", address)
+print("Target:", address)
 
 data = b""
 payload_size = struct.calcsize("L")
